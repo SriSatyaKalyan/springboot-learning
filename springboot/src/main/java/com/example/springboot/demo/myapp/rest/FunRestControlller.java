@@ -21,6 +21,6 @@ public class FunRestControlller {
     //expose a new endpoint for "fortune"
     @GetMapping("/fortune")
     public String getDailyFortune(){
-        return "Today is your lucky day!";
+        return "Today is your lucky day! Yayy!";
     }
 }
