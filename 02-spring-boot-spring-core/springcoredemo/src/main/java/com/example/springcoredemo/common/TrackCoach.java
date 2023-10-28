@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@Primary // - this annotation is intended to make it the primary class
-@Lazy // - this is to ensure it is not initialized without necessity
+//@Lazy    // - this is to ensure bean is not initialized without necessity
 public class TrackCoach implements Coach{
 
     public TrackCoach(){
