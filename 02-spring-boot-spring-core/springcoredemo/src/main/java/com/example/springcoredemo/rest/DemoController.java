@@ -17,11 +17,13 @@ public class DemoController {
 
 //  --- CONSTRUCTOR INJECTION ---
     @Autowired
-    public DemoController(@Qualifier("cricketCoach") Coach theCoach,
-                          @Qualifier("cricketCoach") Coach theAnotherCoach){
+    public DemoController(@Qualifier("aquatic") Coach theCoach
+//                       ,@Qualifier("cricketCoach") Coach theAnotherCoach
+    ){
+
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
-        anotherCoach = theAnotherCoach;
+//        anotherCoach = theAnotherCoach;
 
     }
 //  --- end of constructor injection ---
@@ -38,9 +40,10 @@ public class DemoController {
         return myCoach.getDailyWorkout();
     }
 
-    @GetMapping("/check")
-    public String check(){
-        return ("Comparing beans myCoach == anotherCoach, " + (myCoach == anotherCoach));
-    }
+//    The below code was written to understand SCOPES
+//    @GetMapping("/check")
+//    public String check(){
+//        return ("Comparing beans myCoach == anotherCoach, " + (myCoach == anotherCoach));
+//    }
 
 }
